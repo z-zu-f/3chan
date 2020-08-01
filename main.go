@@ -16,6 +16,7 @@ func main() {
 }
 
 func urls() {
+	gin.SetMode(gin.ReleaseMode)
 	route := gin.Default()
 	route.Static("/static", "./views/static")
 	route.LoadHTMLGlob("./views/templates/*.tmpl")

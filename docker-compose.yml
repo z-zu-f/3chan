@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  go_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: 3chan
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - 3chan-mysql-data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: 3chan
+
+volumes:
+  3chan-mysql-data:
