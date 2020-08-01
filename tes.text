@@ -1,0 +1,1 @@
+docker run -d -p 3306:3306 -v 3chan-db:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=3chan mysql:5.7

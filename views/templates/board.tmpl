@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>3Chan</title>
+  <link rel="stylesheet" href="/static/common.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> </head>
+<body>
+  <div class="container">
+    <h1>レス一覧</h1>
+    <form method="post">
+      <div class="form-group"> <label for="view_name">表示名</label> <input id="view_name" type="text" name="viewName" class="form-control" value=""> </div>
+      <div class="form-group"> <label for="message">メッセージ</label> <textarea id="message" name="message" class="form-control" rows="3"></textarea> </div>
+      <div class="form-group"> <input type="submit" name="btn_submit" class="btn btn-primary right-button" value="書き込む"> </div>
+    </form>
+    <div class="section">
+    {{range .resList}}
+      <article class="card">
+        <div class="info">
+          <div class="title">名前: {{.ViewName}}</div>
+          <div class="created_at">{{.CreatedAt}}</div>
+          <div>{{.Body}}</div>
+        </div>
+      </article>
+      {{end}}
+      </div>
+  </div>
+</body>
+</html>

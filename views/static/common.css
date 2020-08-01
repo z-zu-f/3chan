@@ -1,0 +1,23 @@
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+.title{
+    float: left;
+}
+.created_at{
+    text-align: right;
+}
+.container{
+    margin-top: 20px;
+}
+.right-button{
+    float: right;
+    margin-bottom: 20px;
+}
+.section{
+    clear: both;
+}
